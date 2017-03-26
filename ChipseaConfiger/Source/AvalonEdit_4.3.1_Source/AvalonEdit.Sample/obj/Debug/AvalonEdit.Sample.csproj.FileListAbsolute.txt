@@ -1,0 +1,10 @@
+E:\wpf\AvalonEdit_4.3.1_Source\bin\Debug\AvalonEdit.Sample.exe
+E:\wpf\AvalonEdit_4.3.1_Source\bin\Debug\AvalonEdit.Sample.pdb
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.csprojResolveAssemblyReference.cache
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\Window1.baml
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\Window1.g.cs
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\App.g.cs
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample_MarkupCompile.cache
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.g.resources
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.exe
+E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.pdb

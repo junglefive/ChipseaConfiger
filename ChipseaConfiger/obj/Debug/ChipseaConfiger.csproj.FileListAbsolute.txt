@@ -1,0 +1,16 @@
+E:\workspace\ChipseaConfiger\ChipseaConfiger\bin\Debug\ChipseaConfiger.exe.config
+E:\workspace\ChipseaConfiger\ChipseaConfiger\bin\Debug\ChipseaConfiger.exe
+E:\workspace\ChipseaConfiger\ChipseaConfiger\bin\Debug\ChipseaConfiger.pdb
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.csprojResolveAssemblyReference.cache
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\MainWindow.g.cs
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\App.g.cs
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger_MarkupCompile.cache
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger_MarkupCompile.lref
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\MainWindow.baml
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.g.resources
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.Properties.Resources.resources
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.csproj.GenerateResource.Cache
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.exe
+E:\workspace\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.pdb
+E:\workspace\ChipseaConfiger\ChipseaConfiger\bin\Debug\ICSharpCode.AvalonEdit.dll
+E:\workspace\ChipseaConfiger\ChipseaConfiger\bin\Debug\ICSharpCode.AvalonEdit.xml

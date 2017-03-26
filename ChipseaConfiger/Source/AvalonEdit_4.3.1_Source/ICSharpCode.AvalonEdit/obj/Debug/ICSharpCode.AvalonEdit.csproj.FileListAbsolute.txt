@@ -1,0 +1,15 @@
+E:\wpf\AvalonEdit_4.3.1_Source\bin\Debug\ICSharpCode.AvalonEdit.xml
+E:\wpf\AvalonEdit_4.3.1_Source\bin\Debug\ICSharpCode.AvalonEdit.dll
+E:\wpf\AvalonEdit_4.3.1_Source\bin\Debug\ICSharpCode.AvalonEdit.pdb
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\ICSharpCode.AvalonEdit_MarkupCompile.cache
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\ICSharpCode.AvalonEdit_MarkupCompile.lref
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\CodeCompletion\CompletionList.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\CodeCompletion\InsightWindow.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\Search\SearchPanel.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\Search\DropDownButton.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\TextEditor.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\themes\generic.baml
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\ICSharpCode.AvalonEdit.g.resources
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\ICSharpCode.AvalonEdit.dll
+E:\wpf\AvalonEdit_4.3.1_Source\ICSharpCode.AvalonEdit\obj\Debug\ICSharpCode.AvalonEdit.pdb
