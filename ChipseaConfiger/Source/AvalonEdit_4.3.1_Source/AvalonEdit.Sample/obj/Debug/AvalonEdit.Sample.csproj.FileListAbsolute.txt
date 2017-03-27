@@ -8,3 +8,5 @@ E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample_Mar
 E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.g.resources
 E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.exe
 E:\wpf\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.pdb
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\Source\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.exe
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\Source\AvalonEdit_4.3.1_Source\AvalonEdit.Sample\obj\Debug\AvalonEdit.Sample.pdb

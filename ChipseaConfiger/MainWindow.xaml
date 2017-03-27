@@ -20,12 +20,18 @@
         <DockPanel Grid.ColumnSpan="2">
             <Menu x:Name="menu" Background="#FF919AAA" DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_New File" />
-                    <MenuItem Header="_Open File" />
-                    <MenuItem Header="_Save "/>
+                    <MenuItem Header="_New File" Click="NewFileClick"/>
+                    <MenuItem Header="_Open File" Click="OpenFileClick" />
+                    <MenuItem Header="_Save " Click="SaveFileClick"/>
                     <MenuItem Header="_Save As..."/>
                     <MenuItem Header="_Close File"/>
                     <MenuItem Header="_Exit"/>
+                </MenuItem>
+                <MenuItem Header="Find">
+                    <MenuItem Header="_Find ..."/>
+                    <MenuItem Header="_Find Next"/>
+                    <MenuItem Header="_Find Previous"/>
+                    <MenuItem Header="_Replace ..."/>
                 </MenuItem>
                 <MenuItem Header="_Edit">
                     <MenuItem Header="_Cut"/>
@@ -34,36 +40,41 @@
                     <MenuItem Header="_Undo"/>
                     <MenuItem Header="_Redo"/>
                 </MenuItem>
+              
 
                 <MenuItem Header="_View">
-                    <MenuItem Header="_Toglge Layout" Click="ToggleLayout"/>
-                    <MenuItem Header="_Toggle WordWrap" Click="ToggleShowWordWrap"/>
-                    <MenuItem Header="_Toggle LineNumber" Click="ToggleShowLineNumber"/>
-                    <MenuItem Header="_Check SFR"/>
-                    <MenuItem Header="_Check Setup Result"/>
+                    <MenuItem Header="_Layout" Name="LayoutSingleItem" Click="ToggleLayout"/>
+                    <MenuItem Header="_WordWrap" Name ="WordWrapItem" Click="ToggleShowWordWrap"/>
+                    <MenuItem Header="_LineNumber" Name="LineNumberItem" Click="ToggleShowLineNumber"/>
+                    <MenuItem Header="_View SFR" Name="ViewSFRItem"/>
+                    <MenuItem Header="_View Setup Result" Name="ViewSetupResult"/>
+                </MenuItem>
+                <MenuItem Header="Tools">
+                    <MenuItem Header="_New Snippets"/>
+                    <MenuItem Header="_New HighLight"/>
                 </MenuItem>
                 <MenuItem Header="_Language">
-                    <MenuItem Header="_Assembly"/>
-                    <MenuItem Header="_C Language"/>
+                    <MenuItem Header="_Assembly" Name="AssemblyItem"/>
+                    <MenuItem Header="_C Language" Name="CLanguageItem"/>
                 </MenuItem>
                 <MenuItem Header="_Options">
-                    <MenuItem Header="_Toggle StatusBar" Click="ToggleStatusBar"/>
+                    <MenuItem  Name="StatusBarItem" Header="_StatusBar" Click="ToggleStatusBar"/>
                 </MenuItem>
                 <MenuItem Header="_Perioherials">
                     <MenuItem Header="_PortIO"/>
                     <MenuItem Header="_Oscillators"/>
                     <MenuItem Header="_Timers"/>
                     <MenuItem Header="_Uart"/>
-                    <MenuItem Header="_SPI"/>
                     <MenuItem Header="_ADC"/>
-                    <MenuItem Header="_Volatage Reference"/>
                     <MenuItem Header="_Interrupt"/>
+                    <MenuItem Header="_SPI"/>
+                    <MenuItem Header="_Volatage Reference"/>
                     <MenuItem Header="_Reset All"/>
                 </MenuItem>
                 <MenuItem Header="_Help">
+                    <MenuItem Header="About"/>
                     <MenuItem Header="Contact"/>
                     <MenuItem Header="ChangeLog"/>
-                    <MenuItem Header="About"/>
                 </MenuItem>
 
             </Menu>
@@ -73,12 +84,13 @@
                 <ColumnDefinition  Name="ColumnLeft" Width="400*"/>
                 <ColumnDefinition Name="ColumnRight"  Width="400*"/>
             </Grid.ColumnDefinitions>
-            <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Left" Width="4" Background="#FFD3F7F1"/>
-            <avalonedit:TextEditor x:Name="TextEditorLeft" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="#FFDCD7D7" BorderThickness="2"/>
-            <avalonedit:TextEditor x:Name="TextEditorRight" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="4,0,0,0" Background="#FFCADAD9" BorderThickness="2"/>
+            <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Left" Width="4" Background="#FF444645"/>
+            <avalonedit:TextEditor x:Name="TextEditorLeft" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="#FFF5EFEF" BorderThickness="2" Margin="2"/>
+            <avalonedit:TextEditor x:Name="TextEditorRight" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="4,2,2,2" Background="#FFE5E8E8" BorderThickness="2"/>
         </Grid>
-        <StatusBar Name="StatusBar" Grid.Row="2" Grid.ColumnSpan="2" DockPanel.Dock="Bottom"/>
-        
+        <DockPanel/>
+        <StatusBar x:Name="StatusBar" Grid.ColumnSpan="2" Grid.Row="2" Background="#FFAEACAC"/>
     </Grid>
+
 
 </Window>
