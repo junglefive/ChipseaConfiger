@@ -61,8 +61,26 @@ namespace ChipseaConfiger
         }
 
 
-        private void NewFileClick(object sender, RoutedEventArgs e) {
-
+        private void NewFileClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Uri uri = new Uri("sys_init.asm", UriKind.Relative);
+                FileStream fs = File.Open(uri.ToString(), FileMode.OpenOrCreate);
+                TextEditorLeft.Load(fs);
+                //TextEditorLeft.
+                StreamWriter sw = new StreamWriter(fs);
+                sw.WriteLine(uri.ToString());
+                TextEditorLeft.Load(fs);
+            }
+            catch (Exception ex){
+                Console.WriteLine("New file fail."+ex.ToString());
+            }
+           
+           
+        }
+        private void ChooseOptionTextEditor(object sender, RoutedEventArgs e) {
+            
 
         }
         private void SaveFileClick(object sender, RoutedEventArgs e)
@@ -94,6 +112,7 @@ namespace ChipseaConfiger
                 TextEditorLeft.Load(currentFileName);
                 TextEditorRight.Load(currentFileName);
                 TextEditorLeft.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(System.IO.Path.GetExtension(currentFileName));
+                TextEditorRight.SyntaxHighlighting = HighlightingManager.Instance.GetDefinitionByExtension(System.IO.Path.GetExtension(currentFileName));
             }
 
         }
