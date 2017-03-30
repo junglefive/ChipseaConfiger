@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0"?>
 <SyntaxDefinition name="ChipseaAssembly Highlighting" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
-  <Color name="Comment" foreground="Green" />
-  <Color name="String" foreground="Blue" />
+  <Color name="Comment" foreground="#75715E" />
+  <Color name="String" foreground="#036A07" />
 
   <!-- This is the main ruleset. -->
-  <RuleSet>
+  <RuleSet ignoreCase = "true">
     <Span color="Comment" begin=";" />
     <Span color="Comment" multiline="true" begin="/\*" end="\*/" />
 
@@ -17,7 +17,7 @@
       </RuleSet>
     </Span>
 
-    <Keywords fontWeight="bold" foreground="Blue">
+    <Keywords  foreground="#ee1d24" >
       <Word>addlw</Word>
       <Word>addpcw</Word>
       <Word>addwf</Word>

@@ -33,9 +33,11 @@ namespace ChipseaConfiger
            
             InitializeComponent();
             IHighlightingDefinition highlighting = UserHighlightInitiate();
+            TextEditorLeft.FontFamily = new FontFamily("consolas");
+            TextEditorLeft.FontSize = 15;
             TextEditorLeft.SyntaxHighlighting = highlighting;
             TextEditorRight.SyntaxHighlighting = highlighting;
-            TextEditorLeft.FontSize = 14;
+            TextEditorRight = TextEditorLeft;
         }
         private IHighlightingDefinition UserHighlightInitiate() {
 
