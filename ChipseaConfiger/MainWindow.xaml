@@ -6,22 +6,23 @@
         xmlns:local="clr-namespace:ChipseaConfiger"
         xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Class="ChipseaConfiger.MainWindow"
         mc:Ignorable="d"
-        Title="ChipseaConfiger" Height="467" Width="672" Background="#FF746A6A" Loaded="Window_Loaded">
+        Title="ChipseaConfiger" Height="500" Width="672" Background="#FF746A6A" Loaded="Window_Loaded">
     <Grid Name="GridWindow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="41*"/>
             <ColumnDefinition Width="42*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="288*"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition/>
             <RowDefinition Height="20" Name="RowStatusBar"/>
         </Grid.RowDefinitions>
-        <DockPanel Grid.ColumnSpan="2">
-            <Menu x:Name="menu" Background="#FF919AAA" DockPanel.Dock="Top">
+        <DockPanel Grid.ColumnSpan="2" Background="#FFC7C5C5">
+            <Menu x:Name="menu" Background="#FFA8A9AA" DockPanel.Dock="Top" Margin="0,3" Padding="0,2">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New File" Click="NewFileClick"/>
                     <MenuItem Header="_Open File" Click="OpenFileClick" />
+                    <MenuItem Header="_New View into File" Click="NewViewIntoFileOnClick"></MenuItem>
                     <MenuItem Header="_Save " Click="SaveFileClick"/>
                     <MenuItem Header="_Save As..."/>
                     <MenuItem Header="_Close File"/>
@@ -43,7 +44,8 @@
 
 
                 <MenuItem Header="_View">
-                    <MenuItem Header="_Layout" Name="LayoutSingleItem" Click="ToggleLayout"/>
+                    <MenuItem Header="_Read Only"></MenuItem>
+                    <MenuItem Header="_Single Layout" Name="LayoutSingleItem" Click="ToggleLayout"/>
                     <MenuItem Header="_WordWrap" Name ="WordWrapItem" Click="ToggleShowWordWrap"/>
                     <MenuItem Header="_LineNumber" Name="LineNumberItem" Click="ToggleShowLineNumber"/>
                     <MenuItem Header="_View SFR" Name="ViewSFRItem"/>
@@ -58,7 +60,8 @@
                     <MenuItem Header="_C Language" Name="CLanguageItem"/>
                 </MenuItem>
                 <MenuItem Header="_Options">
-                    <MenuItem  Name="StatusBarItem" Header="_StatusBar" Click="ToggleStatusBar"/>
+                    <MenuItem Header="_Scheme"  Name ="ItemScheme" Click="ItemSchemeOnClick"></MenuItem>
+                    <MenuItem Header="_StatusBar"  Name="StatusBarItem" Click="ToggleStatusBar"/>
                     <MenuItem Header="_TextEditor" Click="ChooseOptionTextEditor"/>
                     <MenuItem Header="_TextArea"/>
                     <MenuItem Header="_Other"/>
@@ -82,16 +85,17 @@
 
             </Menu>
         </DockPanel>
-        <Grid x:Name="GridPanel" Grid.Row="1" Background="#FFD3D5EC" Grid.ColumnSpan="2">
+        <Grid x:Name="GridPanel" Grid.Row="1" Background="White" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition  Name="ColumnLeft" Width="400*"/>
-                <ColumnDefinition Name="ColumnRight"  Width="400*"/>
+
+                <ColumnDefinition  Name="ColumnLeft"  Width="600*"/>
+                <ColumnDefinition  Name="ColumnRight" Width="600*"/>
             </Grid.ColumnDefinitions>
-            <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Left" Width="4" Background="#FF444645"/>
-            <avalonedit:TextEditor x:Name="TextEditorLeft" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="#FFF5EFEF" BorderThickness="2" Margin="2"/>
-            <avalonedit:TextEditor x:Name="TextEditorRight" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10" Background="#FFE5E8E8" BorderThickness="2"/>
+            <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Left" Width="4" Background="#FF858987"/>
+            <avalonedit:TextEditor x:Name="TextEditorLeft"   IsReadOnly="True"  ShowLineNumbers="True"  LineNumbersForeground="Gray" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="White" BorderThickness="2" Padding="12"/>
+            <avalonedit:TextEditor x:Name="TextEditorRight" ShowLineNumbers="True"  LineNumbersForeground="Gray" Grid.Column="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="White" BorderThickness="2" Padding="12" Margin="4,0,0,0"/>
         </Grid>
-        <StatusBar x:Name="StatusBar" Grid.ColumnSpan="2" Grid.Row="2" Background="#FFAEACAC"/>
+        <StatusBar x:Name="StatusBar" Grid.ColumnSpan="2" Grid.Row="2" Background="#FFB2AFAF"/>
     </Grid>
 
 

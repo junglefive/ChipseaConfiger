@@ -38,6 +38,11 @@ namespace ChipseaConfiger
             TextEditorLeft.SyntaxHighlighting = highlighting;
             TextEditorRight.SyntaxHighlighting = highlighting;
             TextEditorRight = TextEditorLeft;
+            //layout
+            TextEditorLeft.Padding = new Thickness(4);
+            TextEditorRight.Padding = new Thickness(4);
+
+
         }
         private IHighlightingDefinition UserHighlightInitiate() {
 
@@ -62,6 +67,35 @@ namespace ChipseaConfiger
             
         }
 
+        private void NewViewIntoFileOnClick(object sender, RoutedEventArgs e)
+        {
+            TextEditorRight = TextEditorLeft;
+
+        }
+        private void ItemSchemeOnClick(object sender, RoutedEventArgs e) {
+            if (ItemScheme.IsChecked)
+            {
+                ItemScheme.IsChecked = false;
+                BrushConverter brushConverter = new BrushConverter();
+                TextEditorLeft.Background =(Brush)brushConverter.ConvertFromString("#FFFFFF");
+                TextEditorRight.Background = (Brush)brushConverter.ConvertFromString("#FFFFFF");
+                TextEditorLeft.Foreground = (Brush)brushConverter.ConvertFromString("#000000");
+                TextEditorRight.Foreground = (Brush)brushConverter.ConvertFromString("#000000");
+            }
+            else {
+
+                ItemScheme.IsChecked = true;
+                BrushConverter brushConverter = new BrushConverter();
+                TextEditorLeft.Background = (Brush)brushConverter.ConvertFromString("#272822");
+                TextEditorRight.Background = (Brush)brushConverter.ConvertFromString("#272822");
+                TextEditorLeft.Foreground = (Brush)brushConverter.ConvertFromString("#FFFACD");
+                TextEditorRight.Foreground = (Brush)brushConverter.ConvertFromString("#FFFACD");
+
+
+            }
+
+            
+        }
 
         private void NewFileClick(object sender, RoutedEventArgs e)
         {
@@ -74,6 +108,7 @@ namespace ChipseaConfiger
                 StreamWriter sw = new StreamWriter(fs);
                 sw.WriteLine(uri.ToString());
                 TextEditorLeft.Load(fs);
+                TextEditorRight.Load(fs);
             }
             catch (Exception ex){
                 Console.WriteLine("New file fail."+ex.ToString());
@@ -120,7 +155,7 @@ namespace ChipseaConfiger
         }
         private void ToggleLayout(object sender, RoutedEventArgs e) {
 
-            if (this.GridPanel.ColumnDefinitions.Count > 1)
+            if (LayoutSingleItem.IsChecked==false)
             {
                 this.GridPanel.ColumnDefinitions.Remove(ColumnRight);
                 LayoutSingleItem.IsChecked = true;
@@ -128,6 +163,7 @@ namespace ChipseaConfiger
             else {
                 this.GridPanel.ColumnDefinitions.Add(ColumnRight);
                 LayoutSingleItem.IsChecked = false;
+                ColumnRight.Width = ColumnLeft.Width;
             }
         }
         private void ToggleStatusBar(object sender, RoutedEventArgs e) {

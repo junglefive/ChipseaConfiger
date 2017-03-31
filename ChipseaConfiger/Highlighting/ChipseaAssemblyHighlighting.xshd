@@ -72,7 +72,7 @@
     </Keywords>
 
     <!-- Digits -->
-    <Rule foreground="DarkBlue">
+    <Rule foreground="#ed008c">
       \b0[xX][0-9a-fA-F]+  # hex number
       |    \b
       (    \d+(\.[0-9]+)?   #number with optional floating point
@@ -80,10 +80,10 @@
       )
       ([eE][+-]?[0-9]+)?    # optional exponent
     </Rule>
-    <Rule foreground="DarkBlue">
+    <Rule foreground="#8B008B">
       ^\s*(%%)?(\w|[\._?])(\w|[_$#@~\.?])*\:
     </Rule>
-    <Rule foreground="DarkBlue">
+    <Rule foreground="#8B008B">
       ^\s*([$@~])(\w|[_$#@~\.?])*\:
     </Rule>
   </RuleSet>
