@@ -69,7 +69,7 @@ namespace ChipseaConfiger
 
         private void NewViewIntoFileOnClick(object sender, RoutedEventArgs e)
         {
-            TextEditorRight = TextEditorLeft;
+            TextEditorRight.Document = TextEditorLeft.Document;
 
         }
         private void ItemSchemeOnClick(object sender, RoutedEventArgs e) {
@@ -157,11 +157,10 @@ namespace ChipseaConfiger
 
             if (LayoutSingleItem.IsChecked==false)
             {
-                this.GridPanel.ColumnDefinitions.Remove(ColumnRight);
+                ColumnRight.Width = new GridLength(0);
                 LayoutSingleItem.IsChecked = true;
             }
             else {
-                this.GridPanel.ColumnDefinitions.Add(ColumnRight);
                 LayoutSingleItem.IsChecked = false;
                 ColumnRight.Width = ColumnLeft.Width;
             }
