@@ -34,13 +34,16 @@ namespace ChipseaConfiger
             InitializeComponent();
             IHighlightingDefinition highlighting = UserHighlightInitiate();
             TextEditorLeft.FontFamily = new FontFamily("consolas");
+            TextEditorRight.FontFamily = new FontFamily("consolas");
             TextEditorLeft.FontSize = 15;
+            TextEditorRight.FontSize = 15;
             TextEditorLeft.SyntaxHighlighting = highlighting;
             TextEditorRight.SyntaxHighlighting = highlighting;
-            TextEditorRight = TextEditorLeft;
             //layout
-            TextEditorLeft.Padding = new Thickness(4);
-            TextEditorRight.Padding = new Thickness(4);
+            TextEditorLeft.Padding = new Thickness(15);
+            TextEditorRight.Padding = new Thickness(15);
+            //SingleLayout
+            ColumnRight.Width = new GridLength(0);
 
 
         }
@@ -66,10 +69,17 @@ namespace ChipseaConfiger
         {
             
         }
+        private void ItemAboutOnClik(object sender, RoutedEventArgs e) {
+            MessageBox.Show("Please goto Web: https://github.com/junglefive/ChipseaConfiger", "About Chipsea Configer");
+
+        }
 
         private void NewViewIntoFileOnClick(object sender, RoutedEventArgs e)
         {
             TextEditorRight.Document = TextEditorLeft.Document;
+            //点击NewViewIntoFile自动打开双ViewFile
+            LayoutSingleItem.IsChecked = false;
+            ColumnRight.Width = ColumnLeft.Width;
 
         }
         private void ItemSchemeOnClick(object sender, RoutedEventArgs e) {

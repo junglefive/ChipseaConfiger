@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ChipseaConfiger"
         xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Class="ChipseaConfiger.MainWindow"
         mc:Ignorable="d"
-        Title="ChipseaConfiger" Height="500" Width="672" Background="#FF746A6A" Loaded="Window_Loaded">
+        Title="ChipseaConfiger" Height="730" Width="600" Background="#FF635E5E" Loaded="Window_Loaded">
     <Grid Name="GridWindow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="41*"/>
@@ -17,8 +17,8 @@
             <RowDefinition/>
             <RowDefinition Height="20" Name="RowStatusBar"/>
         </Grid.RowDefinitions>
-        <DockPanel Grid.ColumnSpan="2" Background="#FFC7C5C5">
-            <Menu x:Name="menu" Background="#FFC7C5C5" DockPanel.Dock="Top" Margin="0,3" Padding="0,2">
+        <DockPanel Grid.ColumnSpan="2" Background="#FFBBB5B5">
+            <Menu x:Name="menu" Background="#FF8F8989" DockPanel.Dock="Top" Padding="0,2">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New File" Click="NewFileClick"/>
                     <MenuItem Header="_Open File" Click="OpenFileClick" />
@@ -28,13 +28,13 @@
                     <MenuItem Header="_Close File"/>
                     <MenuItem Header="_Exit"/>
                 </MenuItem>
-                <MenuItem Header="Find">
+                <MenuItem Header="Find" Padding="7,1,8,1">
                     <MenuItem Header="_Find ..."/>
                     <MenuItem Header="_Find Next"/>
                     <MenuItem Header="_Find Previous"/>
                     <MenuItem Header="_Replace ..."/>
                 </MenuItem>
-                <MenuItem Header="_Edit">
+                <MenuItem Header="_Edit" Padding="7,1,8,1">
                     <MenuItem Header="_Cut"/>
                     <MenuItem Header="_Copy"/>
                     <MenuItem Header="_Paste"/>
@@ -43,59 +43,60 @@
                 </MenuItem>
 
 
-                <MenuItem Header="_View">
+                <MenuItem Header="_View" Padding="7,1,8,1">
                     <MenuItem Header="_Read Only"></MenuItem>
-                    <MenuItem Header="_Single Layout" Name="LayoutSingleItem" Click="ToggleLayout"/>
-                    <MenuItem Header="_MonoKai Scheme"  Name ="ItemScheme" Click="ItemSchemeOnClick"></MenuItem>
+                    <MenuItem Header="_Single Layout" Name="LayoutSingleItem" IsChecked="True" Click="ToggleLayout"/>
+                    <MenuItem Header="_MonoKai Scheme"  Name ="ItemScheme"  Click="ItemSchemeOnClick"></MenuItem>
                     <MenuItem Header="_WordWrap" Name ="WordWrapItem" Click="ToggleShowWordWrap"/>
                     <MenuItem Header="_LineNumber" Name="LineNumberItem" Click="ToggleShowLineNumber"/>
                     <MenuItem Header="_View SFR" Name="ViewSFRItem"/>
                     <MenuItem Header="_View Setup Result" Name="ViewSetupResult"/>
                 </MenuItem>
-                <MenuItem Header="Tools">
+                <MenuItem Header="Tools" Padding="7,1,8,1">
                     <MenuItem Header="_New Snippets"/>
                     <MenuItem Header="_New HighLight"/>
                 </MenuItem>
-                <MenuItem Header="_Language">
+                <MenuItem Header="_Language" Padding="7,1,8,1">
                     <MenuItem Header="_Assembly" Name="AssemblyItem"/>
                     <MenuItem Header="_C Language" Name="CLanguageItem"/>
                 </MenuItem>
-                <MenuItem Header="_Options">
+                <MenuItem Header="_Options" Padding="7,1,8,1">
                     <MenuItem Header="_StatusBar"  Name="StatusBarItem" Click="ToggleStatusBar"/>
                     <MenuItem Header="_TextEditor" Click="ChooseOptionTextEditor"/>
                     <MenuItem Header="_TextArea"/>
                     <MenuItem Header="_Other"/>
                 </MenuItem>
-                <MenuItem Header="_Perioherials">
-                    <MenuItem Header="_PortIO"/>
+                <MenuItem Header="_Perioherials" Padding="7,1,8,1">
                     <MenuItem Header="_Oscillators"/>
-                    <MenuItem Header="_Timers"/>
-                    <MenuItem Header="_Uart"/>
-                    <MenuItem Header="_ADC"/>
                     <MenuItem Header="_Interrupt"/>
+                    <MenuItem Header="_PortIO"/>
+                    <MenuItem Header="_Uart"/>
                     <MenuItem Header="_SPI"/>
-                    <MenuItem Header="_Volatage Reference"/>
-                    <MenuItem Header="_Reset All"/>
+                    <MenuItem Header="_ADC"/>
+                    <MenuItem Header="_LCD"/>
+                    <MenuItem Header="_LED"/>
+                    <MenuItem Header="_Timers"/>
+                    <MenuItem Header="_Reset All Defualt"/>
                 </MenuItem>
-                <MenuItem Header="_Help">
-                    <MenuItem Header="About"/>
+                <MenuItem Header="_Help" Padding="7,1,8,1">
                     <MenuItem Header="Contact"/>
                     <MenuItem Header="ChangeLog"/>
+                    <MenuItem Header="About ChipseaConfiger" Click="ItemAboutOnClik"/>
                 </MenuItem>
 
             </Menu>
         </DockPanel>
-        <Grid x:Name="GridPanel" Grid.Row="1" Background="White" Grid.ColumnSpan="2">
+        <Grid x:Name="GridPanel" Grid.Row="1" Background="#FFC5C2C2" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
 
                 <ColumnDefinition  Name="ColumnLeft"  Width="600*"/>
-                <ColumnDefinition  Name="ColumnRight" Width="600*"/>
+                <ColumnDefinition  Name="ColumnRight" Width="660*"/>
             </Grid.ColumnDefinitions>
             <GridSplitter x:Name="gridSplitter" Grid.Column="1" HorizontalAlignment="Left" Width="4" Background="#FF858987"/>
-            <avalonedit:TextEditor x:Name="TextEditorLeft"   IsReadOnly="True"  ShowLineNumbers="True"  LineNumbersForeground="Gray" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="White" BorderThickness="2" Padding="12"/>
-            <avalonedit:TextEditor x:Name="TextEditorRight" ShowLineNumbers="True"  LineNumbersForeground="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="White" BorderThickness="2" Padding="0" Margin="4,0,0,0" Grid.Column="1"/>
+            <avalonedit:TextEditor x:Name="TextEditorLeft"   IsReadOnly="True"  ShowLineNumbers="True"  LineNumbersForeground="Gray" Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="White" BorderThickness="2"/>
+            <avalonedit:TextEditor x:Name="TextEditorRight" ShowLineNumbers="True"  LineNumbersForeground="Gray" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Background="White" BorderThickness="2" Margin="4,0,0,0" Grid.Column="1"/>
         </Grid>
-        <StatusBar x:Name="StatusBar" Grid.ColumnSpan="2" Grid.Row="2" Background="#FFB2AFAF"/>
+        <StatusBar x:Name="StatusBar" Grid.ColumnSpan="2" Grid.Row="2" Background="#FFE4E0E0"/>
     </Grid>
 
 
