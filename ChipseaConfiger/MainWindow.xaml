@@ -18,7 +18,7 @@
             <RowDefinition Height="20" Name="RowStatusBar"/>
         </Grid.RowDefinitions>
         <DockPanel Grid.ColumnSpan="2" Background="#FFBBB5B5">
-            <Menu x:Name="menu" Background="#FF8F8989" DockPanel.Dock="Top" Padding="0,2">
+            <Menu x:Name="menu" Background="#FFB2AFAF" DockPanel.Dock="Top" Padding="0,2">
                 <MenuItem Header="_File">
                     <MenuItem Header="_New File" Click="NewFileClick"/>
                     <MenuItem Header="_Open File" Click="OpenFileClick" />
@@ -67,16 +67,17 @@
                     <MenuItem Header="_Other"/>
                 </MenuItem>
                 <MenuItem Header="_Perioherials" Padding="7,1,8,1">
-                    <MenuItem Header="_Oscillators"/>
-                    <MenuItem Header="_Interrupt"/>
-                    <MenuItem Header="_PortIO"/>
-                    <MenuItem Header="_Uart"/>
-                    <MenuItem Header="_SPI"/>
-                    <MenuItem Header="_ADC"/>
-                    <MenuItem Header="_LCD"/>
-                    <MenuItem Header="_LED"/>
-                    <MenuItem Header="_Timers"/>
-                    <MenuItem Header="_Reset All Defualt"/>
+                    <MenuItem Header="_Select SOC" Name="ItemSelecSoc" Click="ItemSelectSocOnClik"/>
+                    <MenuItem Header="_Oscillators" Name="Item_Oscillators" IsEnabled="False"/>
+                    <MenuItem Header="_Interrupt" Name="Item_Interrupt" IsEnabled="False"/>
+                    <MenuItem Header="_PortIO" Name="Item_PortIO"   IsEnabled="False" Click="ItemPortsIOClick"/>
+                    <MenuItem Header="_Uart"  Name="Item_Uart" IsEnabled="False"/>
+                    <MenuItem Header="_SPI"  Name="Item_SPI" IsEnabled="False"/>
+                    <MenuItem Header="_ADC"  Name="Item_ADC" IsEnabled="False"/>
+                    <MenuItem Header="_LCD"  Name="Item_LCD" IsEnabled="False"/>
+                    <MenuItem Header="_LED"  Name="Item_LED" IsEnabled="False"/>
+                    <MenuItem Header="_Timers"  Name="Item_Timers" IsEnabled="False"/>
+                    <MenuItem Header="_Reset All Defualt" Name="Item_Reset"  IsEnabled="False"/>
                 </MenuItem>
                 <MenuItem Header="_Help" Padding="7,1,8,1">
                     <MenuItem Header="Contact"/>

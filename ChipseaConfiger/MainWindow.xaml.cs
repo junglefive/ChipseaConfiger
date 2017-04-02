@@ -1,4 +1,5 @@
-﻿using ICSharpCode.AvalonEdit.Highlighting;
+﻿using ICSharpCode.AvalonEdit;
+using ICSharpCode.AvalonEdit.Highlighting;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -26,8 +27,9 @@ namespace ChipseaConfiger
     /// </summary>
     public partial class MainWindow : Window
     {
-
+    //    public static ChipseaSOC currentSoc { get; set; } = null;
         IHighlightingDefinition chipseaAssemblyHighlighting;
+       // TextEditor te;
         public MainWindow()
         {
            
@@ -119,6 +121,7 @@ namespace ChipseaConfiger
                 sw.WriteLine(uri.ToString());
                 TextEditorLeft.Load(fs);
                 TextEditorRight.Load(fs);
+             
             }
             catch (Exception ex){
                 Console.WriteLine("New file fail."+ex.ToString());
@@ -215,6 +218,49 @@ namespace ChipseaConfiger
                 TextEditorRight.ShowLineNumbers = true;
                 LineNumberItem.IsChecked = true;
             }
+
+        }
+        private void ItemPortsIOClick(object sender, RoutedEventArgs e) {
+            ChipseaSOC.currentSoc.socSetingChanged += Soc_socSetingChanged;
+            ChipseaSOC.currentSoc.showWindowPortsIO();
+        }
+
+        private void Soc_socSetingChanged(object sender, ChipseaEventArgs e)
+        {
+            //throw new NotImplementedException();
+            TextEditorLeft.AppendText(e.sfrKeyValue.ToString());
+        }
+        private void ItemSelectSocOnClik(object sender, RoutedEventArgs e) {
+            if (!ItemSelecSoc.IsChecked)
+            {
+                SelectSOC windowSelectSoc = new SelectSOC();
+                windowSelectSoc.Show();
+                ItemSelecSoc.IsChecked = true;
+                Item_Oscillators.IsEnabled = true;
+                Item_Interrupt.IsEnabled = true;
+                Item_PortIO.IsEnabled = true;
+                Item_Uart.IsEnabled = true;
+                Item_SPI.IsEnabled = true;
+                Item_ADC.IsEnabled = true;
+                Item_LCD.IsEnabled = true;
+                Item_LED.IsEnabled = true;
+                Item_Timers.IsEnabled = true;
+                Item_Reset.IsEnabled = true;
+            }
+            else {
+                ItemSelecSoc.IsChecked = false;
+                Item_Oscillators.IsEnabled = false;
+                Item_Interrupt.IsEnabled = false;
+                Item_PortIO.IsEnabled = false;
+                Item_Uart.IsEnabled = false;
+                Item_SPI.IsEnabled = false;
+                Item_ADC.IsEnabled = false;
+                Item_LCD.IsEnabled = false;
+                Item_LED.IsEnabled = false;
+                Item_Timers.IsEnabled = false;
+                Item_Reset.IsEnabled = false;
+            }
+
 
         }
     }

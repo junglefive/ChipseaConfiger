@@ -1,0 +1,39 @@
+﻿<Window x:Class="ChipseaConfiger.SelectSOC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChipseaConfiger"
+        mc:Ignorable="d"
+        Title="SelectSOC" Height="279.503" Width="281.367">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TreeView x:Name="treeView" Grid.Row="1">
+            <TreeViewItem Header="CSU14PD8X" Background="#FFECE7E7" BorderThickness="1,1,1,0" Margin="5" Padding="5">
+                <TreeViewItem Header="CSU14PD87" Selected="CSU14PD87ItemSelected" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU14PD88" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU14PD89" Margin="4"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="CSU8RP118X" Background="#FFECE7E7" BorderThickness="1,1,1,0" Margin="5" Padding="5">
+                <TreeViewItem Header="CSU8RP1185" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU8RP1185D" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU8RP1185E" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU8RP1185" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU8RP1186" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU8RP1186B" Margin="4"></TreeViewItem>
+
+            </TreeViewItem>
+            <TreeViewItem Header="CSU18MXX" Background="#FFECE7E7" BorderThickness="1,1,1,0" Margin="5" Padding="5">
+                <TreeViewItem Header="CSU18M81" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU18M82" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU18M83" Margin="4"></TreeViewItem>
+                <TreeViewItem Header="CSU18M88" Margin="4"></TreeViewItem>
+            </TreeViewItem>
+
+        </TreeView>
+
+    </Grid>
+</Window>

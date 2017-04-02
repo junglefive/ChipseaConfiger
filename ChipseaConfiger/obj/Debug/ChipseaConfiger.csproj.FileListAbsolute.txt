@@ -62,3 +62,8 @@ E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Deb
 E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.g.resources
 E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.Properties.Resources.resources
 E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\ChipseaConfiger.csproj.GenerateResource.Cache
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\SelectSOC.g.cs
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\SelectSOC.baml
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\CSU14PD8X\CSU14PD87\CSU14PD87IOPorts.g.cs
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\obj\Debug\CSU14PD8X\CSU14PD87\CSU14PD87IOPorts.baml
+E:\Workspace\CS-Configer\ChipseaConfiger\ChipseaConfiger\ChipseaConfiger\bin\Debug\Resource\CSU14PD87.jpg
